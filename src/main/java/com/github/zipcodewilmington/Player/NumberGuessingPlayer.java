@@ -1,4 +1,4 @@
 package com.github.zipcodewilmington.Player;
 
-public class CardPlayer {
+public class NumberGuessingPlayer {
 }

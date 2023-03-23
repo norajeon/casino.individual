@@ -16,4 +16,13 @@ public class SlotsPlayerTest {
         Assert.assertEquals(a.getBalance(), expected);
     }
 
+    @Test
+    public void testSetBalance() {
+        CasinoAccount test = new CasinoAccount("Hello", "Password", 50.00);
+        SlotsPlayer a = new SlotsPlayer(test);
+        a.setBalance(30.00);
+        Double expected = 30.00;
+        Assert.assertEquals(a.getBalance(), expected);
+    }
+
 }

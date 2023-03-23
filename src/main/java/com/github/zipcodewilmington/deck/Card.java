@@ -1,7 +1,11 @@
 package com.github.zipcodewilmington.deck;
 
 
+<<<<<<< HEAD
 class Card{
+=======
+public class Card{
+>>>>>>> Dev
     private Rank rank;
     private Suit suit;
 

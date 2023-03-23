@@ -8,12 +8,20 @@ import org.junit.Assert;
 
 public class DealerTest {
 
+
    /* @Test
+=======
+    @Test
+>>>>>>> Dev
     public void dealerTestConstructor(){
         Dealer dealer = new Dealer();
         Assert.assertEquals(52, dealer.getDeck().size());
         Assert.assertFalse(dealer.getDeck().isEmpty());
+<<<<<<< HEAD
     }*/
+
+    }
+
 
 //    @Test
 //    public void testCompareHands(){
@@ -49,4 +57,4 @@ public class DealerTest {
 //            player.addCard
 //    }
 
-}
+//}

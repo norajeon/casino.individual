@@ -16,15 +16,15 @@ public class Dealer { //2 instances variables deck and hand.
 
 
     public Dealer(){
-        deck = new ArrayList<>(); //initializing deck as an arraylist
-        hand = new ArrayList<>(); //initializing hand as an arraylist
-
-
-        for (Suit suit : Suit.values()){
-            for (Rank rank : Rank.values()){
-                deck.add(new Card(suit, rank));
-            }
-        }
+//        deck = new ArrayList<>(); //initializing deck as an arraylist
+//        hand = new ArrayList<>(); //initializing hand as an arraylist
+//
+//
+//        for (Card.getSuit() : Suit.values()){
+//            for (Card.Rank rank : Rank.values()){
+//                deck.add(new Card(suit, rank));
+//            }
+//        }
     }
 
     public List<Card> getDeck(){

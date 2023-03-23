@@ -16,8 +16,8 @@ public abstract class Games {
 
     }
 
-    public void addPlayer(List<Player> player) {
-
+    public void addPlayer(Player player) {
+        players.add(player);
     }
 
     public void playAgain() {

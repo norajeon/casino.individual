@@ -1,8 +1,6 @@
 package com.github.zipcodewilmington.dealer;
 
 import com.github.zipcodewilmington.deck.Card;
-import com.github.zipcodewilmington.deck.Rank;
-import com.github.zipcodewilmington.deck.Suit;
 import jdk.internal.org.jline.terminal.Terminal;
 
 import java.util.ArrayList;

@@ -22,12 +22,12 @@ public class DealerTest {
 
             dealer.getHand().add(new Card(Suit.CLUBS, Rank.ACE));
             dealer.getHand().add(new Card(Suit.HEARTS, Rank.KING));
-            player.getHand().add(new Card(Suit.DIAMONDS, Rank.TEN));
-            player.getHand().add(new Card(Suit.SPADES, Rank.JACK));
+            player.addCard(new Card(Suit.DIAMONDS, Rank.TEN));
+            player.addCard(new Card(Suit.SPADES, Rank.JACK));
 
             dealer.compareHands(player);
 
-            Assert.assertEquals(10, player.getMoney());
+            assertEquals(10, player.getMoney());
 
             player.clearHand();
             dealer.clearHand();
@@ -39,7 +39,7 @@ public class DealerTest {
 
             dealer.compareHands(player);
 
-            Assert.assertEquals(0, player.getMoney());
+            assertEquals(0, player.getMoney());
 
             player.clearHand();
             dealer.clearHand();

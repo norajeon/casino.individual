@@ -1,14 +1,12 @@
 package com.github.zipcodewilmington.deck;
 
-public class Card {
-
-
 enum Rank{
      TWO, THREE, FOUR,FIVE,SIX,SEVEN,EIGHT,NINE,TEN,JACK,QUEEN,KING,ACE
 }
 enum Suit{
     HEARTS, DIAMONDS,CLUBS,SPADES
 }
+class Card{
     private Rank rank;
     private Suit suit;
 
@@ -22,5 +20,4 @@ enum Suit{
     public Suit getSuit(){
         return suit;
     }
-
 }

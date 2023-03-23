@@ -21,8 +21,4 @@ public abstract class Player{
 
     }
 
-    //abstract  any idea why abstract? What kinds of differences will there be between the different types of players?
-    //uHHH lol nah it's not in the instructions. we were just super burnt out so we just did whatever the instructor todl us
-    // well you can, but when you make SlotsPlayer and stuff, what wwould be different about them lol
-    // p much lol unless we didn't read somethin
 }

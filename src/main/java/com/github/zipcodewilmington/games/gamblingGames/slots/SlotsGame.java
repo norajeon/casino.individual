@@ -24,10 +24,10 @@ public class SlotsGame extends Games implements GambleGames {
 
     }
 
-    public SlotsGame(List<Player> players, Double balance) {
+    public SlotsGame(List<Player> players) {
         // Call the constructor of the abstract superclass
         super(players);
-        this.balance = balance;
+//        this.balance = balance;
     }
     //needs to call account balance
     //need bet method, how much to bet

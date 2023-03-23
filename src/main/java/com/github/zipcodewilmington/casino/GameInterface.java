@@ -6,5 +6,5 @@ package com.github.zipcodewilmington.casino;
 public interface GameInterface extends Runnable {
 
 
-
+    void add(PlayerInterface player);
 }

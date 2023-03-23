@@ -56,7 +56,7 @@ public class Casino implements Runnable {
 
     private String getArcadeDashboardInput() {
         return console.getStringInput(new StringBuilder()
-                .append("Welcome to the Arcade Dashboard!")
+                .append("Welcome to the Azure Dome Casino!")
                 .append("\nFrom here, you can select any of the following options:")
                 .append("\n\t[ create-account ], [ select-game ]")
                 .toString());

@@ -5,8 +5,10 @@ import com.github.zipcodewilmington.Player.Player;
 import com.github.zipcodewilmington.games.Games;
 import com.github.zipcodewilmington.games.gamblingGames.GambleGames;
 
+
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  * Created by leon on 7/21/2020.
@@ -38,7 +40,9 @@ public class SlotsGame extends Games implements GambleGames {
 
     @Override
     public Double bet() {
-        return null;
+
+        String betting = "";
+        return 0.00;
     }
 
     @Override

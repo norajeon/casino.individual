@@ -2,7 +2,9 @@ package com.github.zipcodewilmington.casino;
 
 import com.github.zipcodewilmington.Casino;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -10,40 +12,74 @@ import java.util.Scanner;
  * `ArcadeAccountManager` stores, manages, and retrieves `ArcadeAccount` objects
  * it is advised that every instruction in this class is logged
  */
-public class CasinoAccountManager extends CasinoAccount {
+public class CasinoAccountManager{
 
-    private HashMap<String, CasinoAccount> account;
-
-    /**
-     * @param accountName     name of account to be returned
-     * @param accountPassword password of account to be returned
-     * @return `ArcadeAccount` with specified `accountName` and `accountPassword`
-     */
+    public List<CasinoAccount> account;
+    private Double balance;
 
     public CasinoAccountManager() {
-        account = new HashMap<>();
-
+        this.account = new ArrayList<>();
     }
 
-    public HashMap<String, CasinoAccount> getMap(){
+    public CasinoAccount getAccount(String accountName, String accountPassword) {
+        for (CasinoAccount a : account) {
+            if (accountName.equals(a.getAccountName()) && accountPassword.equals(a.getPassword())) {
+                return a;
+            }
+            else {
+                return null;
+            }
+        }
+        return null;
+    }
+
+    public List<CasinoAccount> registerAccount(CasinoAccount a) {
+        account.add(a);
         return account;
     }
 
-    public void setMap(HashMap<String, CasinoAccount> account) {
-        this.account = account;
+    public CasinoAccount createAccount(String accountName, String accountPassword) {
+        CasinoAccount acc = new CasinoAccount(accountName, accountPassword, balance);
+        registerAccount(acc);
+        return acc;
     }
 
-    public void registerAccount(CasinoAccount mainAccount) {
-        account.put(mainAccount.getAccountName(), mainAccount);
-    }
 
-    public CasinoAccount getAccount(CasinoAccount mainAccount, String password) {
-       CasinoAccount currAcc = new CasinoAccount();
-        if(password.equals(account.get(mainAccount).getPassword())) {
-            currAcc = account.get(mainAccount);
-        }
-            return currAcc;
-    }
+
+//    private HashMap<String, CasinoAccount> account;
+//
+//    /**
+//     * @param accountName     name of account to be returned
+//     * @param accountPassword password of account to be returned
+//     * @return `ArcadeAccount` with specified `accountName` and `accountPassword`
+//     */
+//
+//    public CasinoAccountManager() {
+//        account = new HashMap<>();
+//
+//    }
+//
+//    public HashMap<String, CasinoAccount> getMap(){
+//        return account;
+//    }
+//
+//    public void setMap(HashMap<String, CasinoAccount> account) {
+//        this.account = account;
+//    }
+//
+//    public void registerAccount(CasinoAccount mainAccount) {
+//        account.put(mainAccount.getAccountName(), mainAccount);
+//    }
+//
+//    public CasinoAccount getAccount(CasinoAccount mainAccount, String password) {
+//       CasinoAccount currAcc = new CasinoAccount();
+//        if(password.equals(account.get(mainAccount).getPassword())) {
+//            currAcc = account.get(mainAccount);
+//        } else {
+//            return null;
+//        }
+//            return currAcc;
+//    }
 
 
 

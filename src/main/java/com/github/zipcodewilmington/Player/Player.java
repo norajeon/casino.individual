@@ -1,5 +1,6 @@
 package com.github.zipcodewilmington.Player;
 
+<<<<<<< HEAD
 import com.github.zipcodewilmington.casino.CasinoAccount;
 
 public abstract class Player{
@@ -25,7 +26,6 @@ public abstract class Player{
     public void setBalance(Double balance) {
         account.setAccountBalance(balance);
     }
-
 
 
 }

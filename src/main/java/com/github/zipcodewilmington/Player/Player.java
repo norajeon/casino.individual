@@ -1,6 +1,6 @@
 package com.github.zipcodewilmington.Player;
 
-public class Player{
+public abstract class Player  {
 
     //abstract
 }

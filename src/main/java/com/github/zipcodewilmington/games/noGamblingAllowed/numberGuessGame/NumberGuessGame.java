@@ -18,17 +18,17 @@ public class NumberGuessGame {
 
         for (int i = 0; i <= 7; i++) {
             Scanner in = new Scanner((System.in));
-            int guess = Integer.parseInt(in.nextLine());
+            int guess = Integer.parseInt(in.next());
             String win = "A winner is you!";
             if (i == 7) {
                 System.out.println("\uD83D\uDE2D You didn't guess the number fast enough!");
                 break;
             } else if (guess < actual) {
-                System.out.println(AnsiColor.BLUE.getColor() + "\uD83E\uDD76 Cold!" + AnsiColor.AUTO.getColor());
+                System.out.println(AnsiColor.BLUE.getColor() + "\r\uD83E\uDD76 Cold!" + AnsiColor.AUTO.getColor());
             } else if (guess > actual) {
-                System.out.println(AnsiColor.RED.getColor() + "\uD83E\uDD75 Hot!" + AnsiColor.AUTO.getColor());
+                System.out.println(AnsiColor.RED.getColor() + "\r\uD83E\uDD75 Hot!" + AnsiColor.AUTO.getColor());
             } else if (guess == actual) {
-                System.out.println("\uD83E\uDD73 A winner is you!");
+                System.out.println("\r\uD83E\uDD73 A winner is you!");
             }
         }
     }

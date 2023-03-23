@@ -1,24 +1,31 @@
 package com.github.zipcodewilmington.Player;
 
+import com.github.zipcodewilmington.casino.CasinoAccount;
+
 public abstract class Player{
-    String firstName;
-    String lastName;
+//    String firstName;
+//    String lastName;
+    CasinoAccount account;
     Double balance;
     // firstName, lastName, account balance :3?
 
-    public Player(String firstName, String lastName, Double balance) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.balance = balance;
+
+
+    public Player(CasinoAccount account) {
+//        this.firstName = firstName;
+//        this.lastName = lastName;
+        this.account = account;
 
     }
 
     public Double getBalance(){
-        return balance;
+        return account.getAccountBalance();
     }
 
-    public void account() {
-
+    public void setBalance(Double balance) {
+        account.setAccountBalance(balance);
     }
+
+
 
 }

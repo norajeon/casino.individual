@@ -1,7 +1,7 @@
 package com.github.zipcodewilmington.games.gamblingGames.yablon;
 import java.util.Scanner;
 public class Yablon {
-    private Deck deck;
+  /*  private Deck deck;
 
     public Yablon(){
         this.deck = new Deck();
@@ -31,5 +31,5 @@ public class Yablon {
         System.out.println("You Lose");
     }else{
         System.out.println("Push, here is your wager back.");
-    }
+    }*/
 }

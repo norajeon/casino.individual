@@ -20,6 +20,9 @@ public class SlotsGame extends Games implements GambleGames {
 
     // need to instantiate acc of casino acc into player class
 
+    public void run() {
+
+    }
 
     public SlotsGame(List<Player> players, Double balance) {
         // Call the constructor of the abstract superclass
@@ -40,9 +43,12 @@ public class SlotsGame extends Games implements GambleGames {
 
     @Override
     public Double bet() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("How much would you like to bet?");
+        Double betAmount = (double) input.nextInt();
 
-        String betting = "";
-        return 0.00;
+        //make acc subtract betAmount
+        return betAmount;
     }
 
     @Override

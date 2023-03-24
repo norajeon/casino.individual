@@ -12,7 +12,7 @@ import org.junit.Assert;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DealerTest {
+public class DealerNewTest {
     public static class NotAbstractPlayer extends Player {
         public NotAbstractPlayer() {
             super();

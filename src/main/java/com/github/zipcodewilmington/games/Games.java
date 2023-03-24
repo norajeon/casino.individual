@@ -20,6 +20,14 @@ public abstract class Games {
         players.add(player);
     }
 
+//    public void getPlayer(List<Player> players) {
+//        int i = 0;
+//        for(Player a : players) {
+//            ;
+//        }
+
+//    }
+
     public void playAgain() {
 
     }

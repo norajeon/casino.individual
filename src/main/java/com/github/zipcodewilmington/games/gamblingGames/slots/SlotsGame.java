@@ -2,8 +2,12 @@ package com.github.zipcodewilmington.games.gamblingGames.slots;
 
 
 import com.github.zipcodewilmington.Player.Player;
+import com.github.zipcodewilmington.Player.SlotsPlayer;
+import com.github.zipcodewilmington.casino.CasinoAccount;
 import com.github.zipcodewilmington.games.Games;
 import com.github.zipcodewilmington.games.gamblingGames.GambleGames;
+import com.github.zipcodewilmington.utils.AnsiColor;
+import com.github.zipcodewilmington.utils.IOConsole;
 
 
 import java.util.List;
@@ -14,13 +18,23 @@ import java.util.Scanner;
  * Created by leon on 7/21/2020.
  */
 public class SlotsGame extends Games implements GambleGames {
+    IOConsole cons = new IOConsole(AnsiColor.RED);
     private Double balance;
+    boolean wantToPlay = true;
+    CasinoAccount temp = new CasinoAccount("hi", "password", 5000.00);
+    SlotsPlayer p1 = new SlotsPlayer(temp);
 
     String[] rand = new String[]{"cherry", "lemon", "7", "banana", "bars", "bell", "horseshoe", "orange", "grape", "pear"};
 
     // need to instantiate acc of casino acc into player class
 
     public void run() {
+
+
+
+        while(wantToPlay) {
+
+        }
 
     }
 
@@ -43,9 +57,7 @@ public class SlotsGame extends Games implements GambleGames {
 
     @Override
     public Double bet() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("How much would you like to bet?");
-        Double betAmount = (double) input.nextInt();
+       Double betAmount = cons.getDoubleInput("How much do you want to bet? Your current amount is \n" + p1.getBalance());
 
         //make acc subtract betAmount
         return betAmount;
@@ -73,6 +85,7 @@ public class SlotsGame extends Games implements GambleGames {
 
     //need to be able to return an array of 3
 //    public Double pullLever(String[] rand) {
+//        SlotsPlayer player = players.get(0);
 //
 //        Player thePlayer = this.players.get(0); // this is a single player game
 //

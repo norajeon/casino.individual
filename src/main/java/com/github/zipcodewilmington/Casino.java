@@ -30,8 +30,9 @@ public class Casino implements Runnable {
         do {
             arcadeDashBoardInput = getArcadeDashboardInput();
             if ("select-game".equals(arcadeDashBoardInput)) {
-                String gameSelectionInput = getGameSelectionInput().toUpperCase();
 
+
+                String gameSelectionInput = getGameSelectionInput().toUpperCase();
                 if (gameSelectionInput.equals("SLOTS")) {
                     // once we know what game they want, we can figure out the maxPlayers
                     // let the function below ask for these

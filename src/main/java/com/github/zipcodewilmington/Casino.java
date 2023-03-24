@@ -44,8 +44,16 @@ public class Casino implements Runnable {
                     // run the game
                     game.run();
 
+
                 } else if (gameSelectionInput.equals("NUMBERGUESS")) {
 
+                    List<CasinoAccount> accs = askForAccounts(casinoAccountManager, 1);
+
+                    // now we hand them over to a game.. SLOTS GAME
+                    NumberGuessGame game = new NumberGuessGame(accs);
+
+                    // run the game
+                    game.run();
 
 
                 } else {

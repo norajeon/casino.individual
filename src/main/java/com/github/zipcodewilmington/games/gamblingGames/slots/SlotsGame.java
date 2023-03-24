@@ -77,7 +77,7 @@ public class SlotsGame extends Games implements GambleGames {
         // create the slots players
         // each game you make will do this, create the correct kind of Player subclass instances
         for (CasinoAccount acc : accounts) {
-            System.out.println(String.format("Creating player for %s", acc.getAccountName()));
+//            System.out.println(String.format("Creating player for %s", acc.getAccountName()));
             SlotsPlayer pl = new SlotsPlayer(acc);
             addPlayer(pl);
         }

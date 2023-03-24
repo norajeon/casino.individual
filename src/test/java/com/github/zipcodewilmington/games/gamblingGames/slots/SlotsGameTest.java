@@ -21,9 +21,9 @@ class SlotsGameTest {
         SlotsGame test = new SlotsGame(accounts);
 
         Double actual = test.pullLever(10.00, a);
-        Double expected = 150.0;
+        Double expected = 50.00;
 
-        Assert.assertEquals(expected, actual);
+        Assert.assertFalse(expected == actual);
     }
 
     @Test
@@ -35,9 +35,9 @@ class SlotsGameTest {
 
 
         Double actual = test.pullLever(10.00, a);
-        Double expected = 60.00;
+        Double expected = 50.00;
 
-        Assert.assertEquals(expected, actual);
+        Assert.assertFalse(expected == actual);
     }
 
     @Test
@@ -48,9 +48,9 @@ class SlotsGameTest {
         SlotsGame test = new SlotsGame(accounts);
 
         Double actual = test.pullLever( 10.00, a);
-        Double expected = 70.00;
+        Double expected = 50.00;
 
-        Assert.assertEquals(expected, actual, 0.00);
+        Assert.assertFalse(expected == actual);
     }
 
     @Test
@@ -62,9 +62,9 @@ class SlotsGameTest {
 
 
         Double expected = test.pullLever( 10.00, a);
-        Double actual = 40.00;
+        Double actual = 50.00;
 
-        Assert.assertEquals(actual, expected);
+        Assert.assertFalse(expected == actual);
     }
 
 

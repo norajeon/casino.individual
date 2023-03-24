@@ -2,6 +2,8 @@ package com.github.zipcodewilmington.dealer;
 
 import com.github.zipcodewilmington.Player.Player;
 import com.github.zipcodewilmington.deck.Card;
+import com.github.zipcodewilmington.deck.Rank;
+import com.github.zipcodewilmington.deck.Suit;
 //import jdk.internal.org.jline.terminal.Terminal;
 
 import java.util.ArrayList;
@@ -17,15 +19,14 @@ public class Dealer { //2 instances variables deck and hand.
 
 
     public Dealer(){
-//        deck = new ArrayList<>(); //initializing deck as an arraylist
-//        hand = new ArrayList<>(); //initializing hand as an arraylist
-//
-//
-//        for (Card.getSuit() : Suit.values()){
-//            for (Card.Rank rank : Rank.values()){
-//                deck.add(new Card(suit, rank));
-//            }
-//        }
+        deck = new ArrayList<>(); //initializing deck as an arraylist
+        hand = new ArrayList<>(); //initializing hand as an arraylist
+
+       for (Suit suit: Suit.values()){
+           for (Rank rank : Rank.values()){
+               deck.add(new Card(rank , suit));
+           }
+        }
     }
 
     public List<Card> getDeck(){

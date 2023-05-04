@@ -3,11 +3,7 @@ package com.github.zipcodewilmington;
 import com.github.zipcodewilmington.Player.Player;
 import com.github.zipcodewilmington.casino.CasinoAccount;
 import com.github.zipcodewilmington.casino.CasinoAccountManager;
-import com.github.zipcodewilmington.casino.GameInterface;
-import com.github.zipcodewilmington.casino.PlayerInterface;
-import com.github.zipcodewilmington.games.Games;
-import com.github.zipcodewilmington.games.noGamblingAllowed.numberGuessGame.NumberGuessGame;
-import com.github.zipcodewilmington.games.noGamblingAllowed.numberGuessGame.NumberGuessPlayer;
+
 import com.github.zipcodewilmington.games.gamblingGames.slots.SlotsGame;
 import com.github.zipcodewilmington.games.gamblingGames.slots.SlotsPlayer;
 import com.github.zipcodewilmington.utils.AnsiColor;
@@ -45,22 +41,11 @@ public class Casino implements Runnable {
                     game.run();
 
 
-                } else if (gameSelectionInput.equals("NUMBERGUESS")) {
-
-                    List<CasinoAccount> accs = askForAccounts(casinoAccountManager, 1);
-
-                    // now we hand them over to a game.. SLOTS GAME
-                    NumberGuessGame game = new NumberGuessGame(accs);
-
-                    // run the game
-                    game.run();
-
-
-                } else {
-                    // TODO - implement better exception handling
-                    String errorMessage = "[ %s ] is an invalid game selection";
-                    throw new RuntimeException(String.format(errorMessage, gameSelectionInput));
                 }
+
+
+
+
             } else if ("create-account".equals(arcadeDashBoardInput)) {
                 console.println("Welcome to the account-creation screen.");
                 String accountName = console.getStringInput("Enter your account name:");
@@ -125,19 +110,4 @@ public class Casino implements Runnable {
     }
 
 
-//    private void play(Object gameObject, Object playerObject) {
-//        GameInterface game = (GameInterface)gameObject;
-//        PlayerInterface player = (PlayerInterface)playerObject;
-//        game.add(player);
-//        game.run();
-//    }
-
-
-
-//    private void play(Games game, Player player) {
-//
-//            game.addPlayer(player);
-//            game.playGame();
-//
-//    }
 }

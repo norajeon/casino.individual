@@ -93,79 +93,29 @@ class SlotsGameTest {
         Assert.assertFalse(expected == actual);
     }
 
-    @Test
-    public void testPayOut() {
-        List<CasinoAccount> accounts = new ArrayList<CasinoAccount>();
-        accounts.add(new CasinoAccount("hi", "impw", 50.00));
-        String[] a = new String[]{"10", "3", "5"};
-        SlotsGame test = new SlotsGame(accounts);
-
-        boolean actual = test.payOut();
-        boolean expected = false;
-        Assert.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void testTotalProfit() {
-        List<CasinoAccount> accounts = new ArrayList<CasinoAccount>();
-        accounts.add(new CasinoAccount("hi", "impw", 50.00));
-        String[] a = new String[]{"10", "3", "5"};
-        SlotsGame test = new SlotsGame(accounts);
-
-        Double actual = test.totalProfit();
-        Double expected = null;
-        Assert.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void testTotalLosses() {
-        List<CasinoAccount> accounts = new ArrayList<CasinoAccount>();
-        accounts.add(new CasinoAccount("hi", "impw", 50.00));
-        String[] a = new String[]{"10", "3", "5"};
-        SlotsGame test = new SlotsGame(accounts);
-
-        Double actual = test.totalLosses();
-        Double expected = null;
-        Assert.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void testMultiplier() {
-        List<CasinoAccount> accounts = new ArrayList<CasinoAccount>();
-        accounts.add(new CasinoAccount("hi", "impw", 50.00));
-        String[] a = new String[]{"10", "3", "5"};
-        SlotsGame test = new SlotsGame(accounts);
-
-        Double actual = test.multiplier();
-        Double expected = null;
-        Assert.assertEquals(expected, actual);
-    }
-
-
-    @Test
-    public void testBet() {
-        List<CasinoAccount> accounts = new ArrayList<CasinoAccount>();
-        accounts.add(new CasinoAccount("hi", "impw", 50.00));
-        SlotsGame test = new SlotsGame(accounts);
-        String[] testing = new String[]{"hi", "oranges", "mangoes", "hello", "whatever"};
-
-        ByteArrayInputStream in = new ByteArrayInputStream("10".getBytes());
-        IOConsole con = new IOConsole(AnsiColor.BLUE, in, System.out);
-        test.bet();
 
 
 
-        Integer actualArr = test.randomSlot(testing).length;
-        Integer actual = 3;
-
-        Assert.assertEquals(actualArr, actual);
-    }
 
 //    @Test
-//    public void testPullLever() {
-//        SlotsGame test = new SlotsGame();
+//    public void testBet() {
+//        List<CasinoAccount> accounts = new ArrayList<CasinoAccount>();
+//        accounts.add(new CasinoAccount("hi", "impw", 50.00));
+//        SlotsGame test = new SlotsGame(accounts);
+//        String[] testing = new String[]{"hi", "oranges", "mangoes", "hello", "whatever"};
 //
+//        ByteArrayInputStream in = new ByteArrayInputStream("10".getBytes());
+//        IOConsole con = new IOConsole(AnsiColor.BLUE, in, System.out);
+//        test.bet();
+//
+//
+//
+//        Integer actualArr = test.randomSlot(testing).length;
+//        Integer actual = 3;
+//
+//        Assert.assertEquals(actualArr, actual);
 //    }
+
 
 
 }

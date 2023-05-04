@@ -17,10 +17,6 @@ public abstract class Games {
         this.accounts = accounts;
     }
 
-    public void playGame() {
-
-    }
-
     public int getMaxPlayers() {
         return 0;
     }
@@ -34,20 +30,5 @@ public abstract class Games {
 
         players.add(player);
     }
-
-//    public void getPlayer(List<Player> players) {
-//        int i = 0;
-//        for(Player a : players) {
-//            ;
-//        }
-
-//    }
-
-    public void playAgain() {
-
-    }
-
-    public boolean isGameOver() {
-        return false;
-    }
 }
+

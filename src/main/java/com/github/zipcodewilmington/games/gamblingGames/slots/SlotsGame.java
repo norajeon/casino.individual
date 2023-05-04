@@ -71,19 +71,17 @@ public class SlotsGame extends Games implements GambleGames {
     }
 
     public SlotsGame(List<CasinoAccount> accounts) {
-        // Call the constructor of the abstract superclass
+     
         super(accounts);
 
         // create the slots players
-        // each game you make will do this, create the correct kind of Player subclass instances
+
         for (CasinoAccount acc : accounts) {
 //            System.out.println(String.format("Creating player for %s", acc.getAccountName()));
             SlotsPlayer pl = new SlotsPlayer(acc);
             addPlayer(pl);
         }
     }
-    //needs to call account balance
-    //need bet method, how much to bet
 
     @Override
     public Double bet() {
@@ -99,25 +97,7 @@ public class SlotsGame extends Games implements GambleGames {
         return betAmount;
     }
 
-    @Override
-    public boolean payOut() {
-        return false;
-    }
 
-    @Override
-    public Double totalProfit() {
-        return null;
-    }
-
-    @Override
-    public Double totalLosses() {
-        return null;
-    }
-
-    @Override
-    public Double multiplier() {
-        return null;
-    }
 
     //need to be able to return an array of 3
     public Double pullLever(Double bet, String[] s) {
@@ -134,31 +114,18 @@ public class SlotsGame extends Games implements GambleGames {
         Double currentBalance = players.get(0).getBalance();
 
 
-        // if they are all 3 the same
-//        if (slot1 == slot2 && slot1 == slot3) {
-//            if (symbol1.equals("7") || symbol1.equals("7️⃣")) {
-//                currentBalance += bet * 10.00; // giga money for 7
-//            } else {
-//                currentBalance += bet * 2.00; // 3 of somethin else
-//            }
-//        } else if (slot1 == slot2 || slot3 == slot2 || slot1 == slot3) { // two of a kind yeth YETH
-//            currentBalance += bet * 1.00; // 2 of a kind
-//        } else {
-//            // not all same.. lose money
-//            currentBalance = currentBalance - bet; // feelsbad
-//        }
-//
+
         if (symbol1 == symbol2 && symbol1 == symbol3) {
             if (symbol1.equals("7") || symbol1.equals("7️⃣")) {
-                currentBalance += bet * 10.00; // giga money for 7
+                currentBalance += bet * 10.00;
             } else {
-                currentBalance += bet * 2.00; // 3 of somethin else
+                currentBalance += bet * 2.00;
             }
         } else if (symbol1 == symbol2 || symbol3 == symbol2 || symbol1 == symbol3) { // two of a kind yeth YETH
-            currentBalance += bet * 1.00; // 2 of a kind
+            currentBalance += bet * 1.00;
         } else {
-            // not all same.. lose money
-            currentBalance = currentBalance - bet; // feelsbad
+            // lose money
+            currentBalance = currentBalance - bet;
         }
 
         // update the player's balance
